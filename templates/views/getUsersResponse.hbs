@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{> header}}  
+  <title>Get All</title>
+</head>
+<body>
+
+  {{> navbar}}
+<p>This is data description page for searching all users from redis database.
+</p>
+{{#if error}}
+  <div class="alert alert-danger">{{error}}</div>
+{{else}}
+  <div class="container mt-5">
+    <h1 class="mb-4">All Users</h1>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each users}}
+          <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.first_name}} {{this.last_name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.phone}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{/if}}
+<br>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

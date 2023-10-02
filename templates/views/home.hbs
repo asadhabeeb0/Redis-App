@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {{> header}}
+  <title>Home</title>
+</head>
+
+<body>
+  {{> navbar}}
+
+    <h1>Welcome to Redis App</h1>
+    <p>
+      Redis App is a simple web application that uses Redis as its database. Redis is an open-source, in-memory data
+      structure store that can be used as a database, cache, and message broker. With Redis App, one can perform basic
+      CRUD (Create, Read, Update, Delete) operations on user data.
+    </p>
+    
+    <p>
+      Redis Insight is available, which is a GUI for Redis.
+    </p>
+    <h2>How to Connect to Redis</h2>
+    <p>
+      To connect Redis to your application, you can use Docker or install it directly on your Ubuntu machine.
+    </p>
+    <h3>Using Ubuntu:</h3>
+    <ol>
+      <li>Download and install WSL2 (Windows Subsystem for Linux).</li>
+      <li>Download Ubuntu from the Microsoft Store and open it.</li>
+      <li>Set your username and password.</li>
+      <li>Run the following commands in Ubuntu:</li>
+    </ol>
+    <pre>
+      <code>
+        $ ls -al
+        $ sudo apt-get install redis-server
+        $ sudo apt-add-repository ppa:redislabs/redis
+        $ sudo apt-get update
+        $ sudo apt-get upgrade
+        $ sudo apt-get install redis-server
+        $ redis-server --version
+        $ redis-server
+        $ redis-cli
+        $ sudo service redis-server start
+      </code>
+    </pre>
+    <h3>Using Docker:</h3>
+    <ol>
+      <li>Download and install Docker.</li>
+      <li>Open a command prompt and run the following Docker commands:</li>
+    </ol>
+    <pre>
+      <code>
+        $ docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+        $ docker ps
+        $ docker exec -it [CONTAINER_ID] bash
+        $ redis-cli
+        $ exit
+        $ exit
+        $ docker rm [CONTAINER_ID]
+      </code>
+    </pre>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

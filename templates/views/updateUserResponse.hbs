@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{> header}}  
+  <title>Updated</title>
+</head>
+<body>
+
+{{> navbar}}
+<h1>User Updated Successfully</h1>
+<div class="container">
+    <p>User ID: {{user.id}}</p>
+    <p>First Name: {{user.first_name}}</p>
+    <p>Last Name: {{user.last_name}}</p>
+    <p>Email: {{user.email}}</p>
+    <p>Phone: {{user.phone}}</p>
+</div><br>
+    <a href="/updateUser">Update Another User</a>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

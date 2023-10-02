@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{> header}}  
+  <title>Get All</title>
+</head>
+<body>
+
+  {{> navbar}}
+<h1>Get All Users</h1>
+<p>By clicking on following button you will get all users from Redis Database</p><br>
+{{#if error}} <span>{{error}}</span>{{/if}}
+<form class="form-inline" method="POST" action="/getUsers">
+  <button type="submit" class="btn btn-primary ml-1">Search</button>
+</form>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+.container {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  /* Custom styles for register.hbs */
+  .container.register {
+    max-width: 400px;
+    margin-top: 50px;
+  }
+  
+  /* Custom styles for navbar.hbs */
+  .navbar {
+    margin-bottom: 20px;
+  }
+  

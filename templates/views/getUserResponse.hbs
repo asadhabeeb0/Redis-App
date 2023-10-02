@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{> header}}  
+  <title>Get User</title>
+</head>
+<body>
+
+  {{> navbar}}
+<p><strong>You searched:</strong></p><br>
+<div class="container">
+<h2>{{user.first_name}} {{user.last_name}}</h2>
+<h3>[{{user.id}}]</h3>
+<div>
+  <h5>Email: {{user.email}}</h5>
+  <h6>Phone: {{user.phone}}</h6>
+</div>
+<br>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
